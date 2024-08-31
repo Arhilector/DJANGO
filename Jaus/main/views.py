@@ -1,15 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
-def index(request):
-    return HttpResponse("<h1>Это мой первый джанго проект!</h1>")
+def home(request):
+    return render(request, 'main/home.html')
 
+def about(request):
+    return render(request, 'main/about.html')
 
-def new(request):
-    return HttpResponse("<h1>'это вторая страница моего проекта на джанго'</h1>")
+def products(request):
+    return render(request, 'main/products.html')
 
-def data(request):
-    return HttpResponse("<h1>'Это оригинальный текст для страницы data'</h1>")
-
-def test(request):
-    return HttpResponse("<h1>'Это оригинальный текст для страницы test'</h1>")
+def contact(request):
+    return render(request, 'main/contact.html')

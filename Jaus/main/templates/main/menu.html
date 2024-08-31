@@ -1,0 +1,11 @@
+{% load static %}
+<aside class="d-flex flex-column align-items-center p-3 bg-light" style="width: 250px; height: 100vh; position: fixed; border-right: 1px solid #ddd;">
+    <img src="{% static 'main/img/logo.jpg' %}" class="mb-3" width="100">
+    <span class="h4 mb-4">Jaus Project</span>
+    <ul class="nav flex-column w-100">
+        <li class="nav-item"><a class="nav-link text-dark" href="{% url 'home' %}">Главная</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="{% url 'about' %}">О компании</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="{% url 'products' %}">Продукция</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="{% url 'contact' %}">Контакты</a></li>
+    </ul>
+</aside>
