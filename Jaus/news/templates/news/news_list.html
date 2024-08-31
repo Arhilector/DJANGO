@@ -1,0 +1,24 @@
+
+{% block title %}
+<title>Новости</title>
+{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h2>Последние Новости</h2>
+
+    {% if news_items %}
+        {% for news_item in news_items %}
+            <div>
+                <h3>{{ news_item.title }}</h3>
+                <p>{{ news_item.content }}</p>
+                <p>{{ news_item.created_at }}</p>
+                <p>Автор: {{ news_item.author }}</p>
+            </div>
+            <hr>
+        {% endfor %}
+    {% else %}
+        <p>Нет новостей для отображения.</p>
+    {% endif %}
+</div>
+{% endblock %}

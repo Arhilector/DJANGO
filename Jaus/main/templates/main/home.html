@@ -8,6 +8,14 @@
 <div class="jumbotron text-center bg-transparent">
     <h1 class="display-4">Добро пожаловать в Jaus Project!</h1>
     <p class="lead">Разработка сайтов и приложений на Django и Flask</p>
-    <a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Подробнее</a>
+    <a class="btn" href="{% url 'about' %}" role="button" style="background-color: #2f4f4f; color: #ffffff;">Подробнее</a>
+
+</div>
+
+
+
+<!-- Включаем блок новостей -->
+<div class="news-section" style="margin-top: 30px; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+    {% include 'news/news_list.html' %}
 </div>
 {% endblock %}
